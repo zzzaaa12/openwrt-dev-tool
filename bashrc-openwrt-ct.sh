@@ -106,7 +106,8 @@ function is_sdk_top() {
 	celeno1="$(ls vendors 2>/dev/null)"
 	celeno2="$(ls user 2>/dev/null)"
         realtek="$(ls users 2>/dev/null)"
-	if [ "$check_openwrt" != "" ] || [ "$celeno1" != "" -a "$celeno2" != "" ] || [ "$realtek" != "" ]; then
+	maxlinear="$(ls $ls_path/goto_docker.sh 2>/dev/null)"
+	if [ "$check_openwrt" != "" ] || [ "$celeno1" != "" -a "$celeno2" != "" ] || [ "$realtek" != "" ] || [ "$maxlinear" != "" ]; then
 		echo "yes"
 	else
 		echo "no"
